@@ -38,7 +38,7 @@ ext {
 
 sonarqube{
     properties{
-        property "sonar.projectKey", "SofkaEstudio-UI"
+        property "sonar.projectKey", "SofkaEstudio"
         property "sonar.host.url", "http://45.77.151.85:9000/"
         property "sonar.login", "sqp_3e40b9713bd8bfe8520a39557b11bb3f4405db0c"
         property "sonar.sourceEncoding", "UTF-8"

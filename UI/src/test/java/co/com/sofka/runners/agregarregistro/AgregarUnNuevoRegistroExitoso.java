@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/AgregarUnNuevoRegistro.feature"},
-        glue = {"co.com.sofka.stepdefinitions"}
+        glue = {"co.com.sofka.stepdefinitions.stepdefinitionagregarregistro"}
 )
 public class AgregarUnNuevoRegistroExitoso {
 }

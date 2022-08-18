@@ -14,14 +14,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.2.4"
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.4.0.2513"
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'java-library'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 apply plugin: "org.sonarqube"
@@ -29,8 +28,8 @@ apply plugin: "org.sonarqube"
 
 ext {
     slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.3.0'
-    serenityCucumberVersion = '3.3.0'
+    serenityCoreVersion = '3.2.4'
+    serenityCucumberVersion = '3.2.4'
     junitVersion = '4.13.1'
     assertJVersion = '3.23.1'
     logbackVersion = '1.2.10'
@@ -47,26 +46,18 @@ sonarqube{
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.18.0'
-    // https://mvnrepository.com/artifact/commons-io/commons-io
-    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
-    // https://mvnrepository.com/artifact/commons-logging/commons-logging
-    implementation group: 'commons-logging', name: 'commons-logging', version: '1.2'
 
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-single-page-report', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-assertions', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-ensure', version: '3.2.4'
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '3.2.4'
+    testImplementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '3.2.4'
 
-    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
-            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
-            "junit:junit:${junitVersion}",
-            "org.junit.platform:junit-platform-launcher:1.8.2",
-            "org.junit.jupiter:junit-jupiter-engine:5.8.2",
-            "org.junit.vintage:junit-vintage-engine:5.8.2",
-            "org.assertj:assertj-core:${assertJVersion}"
+    testImplementation "junit:junit:${junitVersion}"
 }
 
 test {
@@ -75,9 +66,7 @@ test {
 }
 
 serenity {
-    // Specify the root package of any JUnit acceptance tests to appear in the Serenity report
     testRoot = "starter"
-    // Specify the root directory of any Cucumber feature files
     requirementsDir = "src/test/resources/features"
     reports = ["single-page-html"]
 

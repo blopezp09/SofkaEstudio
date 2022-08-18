@@ -13,7 +13,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 public class SetUp {
 
     private static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
-    @Managed()
+    @Managed(options = "--headless")
     protected WebDriver browser;
 
     protected void configureWebDriver(){

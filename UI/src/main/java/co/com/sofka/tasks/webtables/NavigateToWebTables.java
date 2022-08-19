@@ -1,7 +1,5 @@
 package co.com.sofka.tasks.webtables;
 
-
-import co.com.sofka.userinterfaces.webtables.NavigateWebTables;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

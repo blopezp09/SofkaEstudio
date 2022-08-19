@@ -5,6 +5,10 @@ import net.thucydides.core.pages.PageObject;
 
 public class FieldsWebTables extends PageObject {
 
+    public static final Target BUTTON_ADD_USER_WEB_TABLE = Target
+            .the("Button add new user web table")
+            .locatedBy("//*[@id=\"addNewRecordButton\"]");
+
     public static final Target FIRST_NAME_WEB_TABLE = Target
             .the("First name Web tables")
             .locatedBy("//*[@id=\"firstName\"]");

@@ -25,7 +25,7 @@ public class FieldsWebTables extends PageObject {
             .the("Salary Web Tables")
             .locatedBy("//*[@id=\"salary\"]");
 
-    public static Target DEPARTMENT_WEB_TABLE = Target
+    public static final Target DEPARTMENT_WEB_TABLE = Target
             .the("Department Web Tables")
             .locatedBy("//*[@id=\"department\"]");
 }

@@ -7,7 +7,7 @@ public class NavigateWebTables extends PageObject {
 
     public static final Target ICON_ELEMENTS = Target
             .the("Icon element")
-            .locatedBy("//*[@id=\"app\"]/div/div/div[2]/div/div[1]/div/div[2]/svg");
+            .locatedBy("//*[@id=\"app\"]/div/div/div[2]/div/div[1]/div/div[2]");
 
     public static final Target ELEMENTS_WEB_TABLES = Target
             .the("Elements web tables")

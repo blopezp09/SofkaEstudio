@@ -1,12 +1,14 @@
 package co.com.sofka.stepdefinitions.stepdefinitionagregarregistro;
 
 import co.com.sofka.setup.ui.SetUp;
+import co.com.sofka.tasks.webtables.NavigateToWebTables;
 import co.com.sofka.utils.Actors;
 import io.cucumber.java.ast.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 
 import static co.com.sofka.tasks.landingpage.OpenLandingPage.openLandingPage;
+import static co.com.sofka.tasks.webtables.NavigateToWebTables.navigateToWebTables;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AgregarRegistroExitosoStepDefinition extends SetUp {
@@ -15,7 +17,8 @@ public class AgregarRegistroExitosoStepDefinition extends SetUp {
     public void queElUsuarioEsteEnLaPaginaYNavegueHastaElApartadoWebTables() {
         actorSetupTheBrowser(Actors.OPEN_LANDING_PAGE_ACTOR.getValue());
         theActorInTheSpotlight().wasAbleTo(
-                openLandingPage()
+                openLandingPage(),
+                navigateToWebTables()
         );
 
     }

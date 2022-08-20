@@ -32,4 +32,12 @@ public class FieldsWebTables extends PageObject {
     public static final Target DEPARTMENT_WEB_TABLE = Target
             .the("Department Web Tables")
             .locatedBy("//*[@id=\"department\"]");
+
+    public static final Target BUTTON_SUBMIT_WEB_TABLE = Target
+            .the("Button submit web table")
+            .locatedBy("//*[@id=\"submit\"]");
+
+    public static final Target FORM_USER_WEB_TABLE = Target
+            .the("Form user web table")
+            .locatedBy("//*[@id=\"app\"]/div/div/div[2]/div[2]");
 }

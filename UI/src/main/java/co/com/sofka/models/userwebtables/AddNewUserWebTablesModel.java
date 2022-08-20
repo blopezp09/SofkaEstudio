@@ -1,15 +1,24 @@
 package co.com.sofka.models.userwebtables;
 
-public class AddNewUserWebTables {
+public class AddNewUserWebTablesModel {
 
     private String firstName;
     private String lastName;
     private String email;
+    private String age;
     private String salary;
     private String department;
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public void setFirstName(String firstName) {

@@ -1,13 +1,11 @@
 package co.com.sofka.tasks.webtables;
 
 import co.com.sofka.models.userwebtables.AddNewUserWebTablesModel;
-import net.serenitybdd.core.pages.WebElementState;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.WebElement;
 
 import static co.com.sofka.userinterfaces.webtables.FieldsWebTables.*;
 
